@@ -1,8 +1,0 @@
-.sites-runtime/
-.sites-checkout/
-node_modules/
-*.zip
-.vercel/
-
-.vercel
-.env*
