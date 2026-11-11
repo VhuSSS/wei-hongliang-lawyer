@@ -1,0 +1,15 @@
+/* The supplied portrait belongs in the attorney introduction; preserve the architecture hero. */
+.profile-top{align-items:center;gap:26px;flex-wrap:nowrap}.profile-portrait{display:block;width:120px;height:150px;object-fit:cover;object-position:50% 23%;border:1px solid #c6d4df26;flex-shrink:0;box-shadow:0 10px 30px #020d1726}
+.profile-top h3{font-size:29px}.profile-top p{font-size:15px;line-height:1.9}.status-tag{font-size:12px;line-height:1.9;max-width:none}
+.ambient-scene:before{opacity:.28;translate:var(--scene-dx,0px) var(--scene-dy,0px);transition:opacity .8s}
+.ambient-orb{opacity:.62;translate:calc(var(--scene-dx,0px) * .5) calc(var(--scene-dy,0px) * .5)}
+.ambient-particles{opacity:.7;z-index:2}
+.cursor-spotlight{position:absolute;left:0;top:0;width:min(90vw,1050px);height:min(90vw,1050px);border-radius:50%;background:radial-gradient(circle at 50% 50%,#a4dfde28 0%,#72bcd524 20%,#6595b712 44%,transparent 70%);transform:translate3d(calc(var(--light-x,55vw) - 50%),calc(var(--light-y,45vh) - 50%),0);opacity:0;z-index:1;pointer-events:none;transition:opacity 1s;will-change:transform;mix-blend-mode:screen}
+.cursor-spotlight:after{content:'';position:absolute;inset:20%;border-radius:50%;background:radial-gradient(circle,#e3c99413,transparent 68%)}
+.pointer-active .cursor-spotlight{opacity:1}.pointer-active .ambient-scene:before{opacity:.4}
+.motion-paused .ambient-orb,.motion-paused .ambient-scene:before{translate:0 0}.motion-paused .cursor-spotlight{opacity:0}
+@media(max-width:1200px){.profile-portrait{width:105px;height:135px}.profile-top{gap:22px}.profile-top h3{font-size:26px}.status-tag{font-size:11px}}
+@media(max-width:900px){.profile-top{flex-wrap:wrap}.profile-portrait{width:115px;height:140px}}
+@media(max-width:560px){.profile-top{flex-wrap:nowrap;gap:17px}.profile-portrait{width:94px;height:122px;object-position:50% 20%}.profile-top h3{font-size:26px}.profile-top h3 small{font-size:13px}.profile-top p{font-size:14px}.status-tag{font-size:10px;max-width:170px;line-height:2}.ambient-orb{opacity:.5}.ambient-scene:before{opacity:.25}.ambient-particles{opacity:.45}.cursor-spotlight{display:none}.pointer-active .ambient-scene:before{opacity:.25}}
+@media(max-width:360px){.profile-top{flex-wrap:wrap}.profile-portrait{width:100px;height:126px}}
+@media(prefers-reduced-motion:reduce){.cursor-spotlight{display:none}.ambient-orb,.ambient-scene:before{translate:none;transition:none}}
